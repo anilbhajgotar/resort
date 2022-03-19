@@ -64,6 +64,7 @@ class _ResortListPageState extends State<ResortListPage> {
     return SafeArea(
       child: Scaffold(
         body: ListView(
+          // shrinkWrap: true,
           children: [
             Container(
               margin: EdgeInsets.all(10),

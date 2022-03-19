@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:resorts/pages/bottom_bar.dart';
 import 'package:resorts/pages/profile_image.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class AccountPage extends StatefulWidget {
   AccountPage({Key? key}) : super(key: key);
@@ -11,10 +12,58 @@ class AccountPage extends StatefulWidget {
 }
 
 class _AccountPageState extends State<AccountPage> {
+  final pkImage =
+      "https://avatars.githubusercontent.com/u/64771610?s=400&u=99364639e075d25227c98a6157b803fb639a9873&v=4";
   final primaryColor = const Color(0xff4338CA);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return
+        // Scaffold(
+        //   backgroundColor: Vx.purple500,
+        //   appBar: AppBar(
+        //     elevation: 0.0,
+        //     leading: VStack([
+        //       VxBox().size(20, 2).white.make(),
+        //       5.heightBox,
+        //       VxBox().size(28, 2).white.make(),
+        //       5.heightBox,
+        //       VxBox().size(15, 2).white.make(),
+        //       5.heightBox,
+        //     ]).pOnly(left: 15, top: 15),
+        //     backgroundColor: Colors.transparent,
+        //   ),
+        //   body: VStack([
+        //     VxBox(
+        //             child: [
+        //       VxBox()
+        //           .square(100)
+        //           .roundedFull
+        //           .neumorphic(
+        //             color: Vx.purple500,
+        //             elevation: 30.0,
+        //           )
+        //           .bgImage(DecorationImage(image: NetworkImage(pkImage)))
+        //           .make(),
+        //       "Hi, "
+        //           .richText
+        //           .withTextSpanChildren(["Anil".textSpan.bold.make()])
+        //           .white
+        //           .xl2
+        //           .make()
+        //           .p8(),
+        //       "Solo Traveller".text.white.make(),
+        //     ].column())
+        //         .makeCentered()
+        //         .h32(context),
+        //     ClipRRect(
+        //       borderRadius: BorderRadius.only(
+        //           topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+        //       child: VxBox().white.make(),
+        //     ).expand()
+        //   ]),
+        // );
+
+        Scaffold(
       body: SafeArea(
         child: Stack(
           children: [

@@ -30,7 +30,8 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       // initialRoute: MyRoutes.accountEditPage,
-      initialRoute: MyRoutes.resortListPage,
+      // initialRoute: MyRoutes.resortListPage,
+      initialRoute: MyRoutes.loginRoute,
       // initialRoute: MyRoutes.homeRoute,
       routes: {
         // "/": (context) => LoginScreen(),

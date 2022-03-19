@@ -37,29 +37,27 @@ class _BottomNavBarFb5State extends State<BottomNavBarFb5> {
             children: [
               IconBottomBar(
                   text: "Explore",
-                  icon: Icon(
-                    Icons.grid_view_outlined,
-                  ),
+                  icon: Icons.grid_view_outlined,
                   selected: home = check,
                   onPressed: () {}),
               IconBottomBar(
                   text: "Saved",
-                  icon: Icon(Icons.abc_rounded),
+                  icon: Icons.favorite_border_outlined,
                   selected: false,
                   onPressed: () {}),
               IconBottomBar(
                   text: "Booking",
-                  icon: Icon(Feather.briefcase),
+                  icon: Feather.briefcase,
                   selected: false,
                   onPressed: () {}),
               IconBottomBar(
                   text: "Inbox",
-                  icon: Icon(Icons.abc_outlined),
+                  icon: Icons.message,
                   selected: false,
                   onPressed: () {}),
               IconBottomBar(
                   text: "Account",
-                  icon: Icon(Icons.dns_sharp),
+                  icon: Icons.person,
                   selected: home = check,
                   onPressed: () async {
                     setState(() {
@@ -95,7 +93,8 @@ class IconBottomBar extends StatelessWidget {
       required this.onPressed})
       : super(key: key);
   final String text;
-  final Icon icon;
+  final IconData icon;
+  // final Icon icon = Icon;
   final bool selected;
   final Function() onPressed;
 
@@ -107,7 +106,11 @@ class IconBottomBar extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        IconButton(onPressed: onPressed, icon: Container()),
+        IconButton(
+          onPressed: onPressed,
+          icon:
+              Icon(icon, size: 25, color: selected ? accentColor : Colors.grey),
+        ),
         Text(
           text,
           style: TextStyle(
